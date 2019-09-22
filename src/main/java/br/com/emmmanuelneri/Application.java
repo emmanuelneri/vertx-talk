@@ -21,6 +21,7 @@ public class Application {
         vertx.deployVerticle(new SimpleHttpVerticle());
         vertx.deployVerticle(new HttpVerticle());
         vertx.deployVerticle(new HttpClientVerticle());
+        vertx.deployVerticle(new HttpAndDBVerticle());
 
         final String eventBusAddress = "EVENT_BUS";
         vertx.deployVerticle(new EventBusProducerVerticle(eventBusAddress));
